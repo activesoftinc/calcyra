@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Scientific Calculator | Developer: Aryan Verma | https://github.com/thegitguru/ -->
+  <meta charset="UTF-8">
+  <meta name="author" content="Aryan Verma">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calcyra — Precision Calculator</title>
+  <link rel="icon" type="image/svg+xml" href="https://fonts.gstatic.com/s/i/materialicons/calculate/v6/24px.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel="stylesheet" href="style.min.css" class="stylesheet">
+</head>
+
+<body>
+  <div class="bg"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <main class="app">
+      <header>
+        <span class="title">Calcyra</span>
+        <div class="header-controls">
+          <div class="mode-switch" id="mode-switch" role="group" aria-label="Calculator mode">
+            <button type="button" data-mode="standard" aria-pressed="false">Standard</button>
+            <button type="button" data-mode="scientific" aria-pressed="true">Scientific</button>
+          </div>
+          <div class="hb">
+            <button class="k gear" id="hbtn" aria-label="History"><span class="material-symbols-outlined"
+                aria-hidden="true">history</span></button>
+            <button class="k gear" id="gear" aria-label="Settings"><span class="material-symbols-outlined"
+                aria-hidden="true">tune</span></button>
+          </div>
+        </div>
+      </header>
+      <section class="disp">
+        <div class="badges"><span id="ang-b">DEG</span><span id="mem-b">M</span><span id="hyp-b">HYP</span><span
+            id="inv-b">INV</span></div>
+        <div class="formula" id="formula"></div>
+        <div class="result" id="result" title="Click to copy">0</div>
+      </section>
+      <section class="keys" id="keys"></section>
+      <aside class="sheet" id="sheet" aria-label="Settings">
+        <div class="grab"></div>
+        <h3>Settings</h3>
+        <div class="row">
+          <div><b>Keypad sound and haptics</b><small>Click and vibration on touch</small></div><label class="sw"><input
+              type="checkbox" id="s-sound" checked><span></span></label>
+        </div>
+        <div class="row">
+          <div><b>Theme</b><small>Follow your device or pick one</small></div>
+          <div class="seg" id="s-theme"><button data-v="auto">Auto</button><button data-v="light">Light</button><button
+              data-v="dark">Dark</button></div>
+        </div>
+        <div class="row">
+          <div><b>Angle unit</b><small>Trigonometry mode</small></div>
+          <div class="seg" id="s-angle"><button data-v="deg">Degrees</button><button data-v="rad">Radians</button><button
+              data-v="grad">Grads</button></div>
+        </div>
+        <div class="row">
+          <div><b>Decimal places</b><small>Maximum shown in results</small></div>
+          <div class="seg" id="s-prec"><button data-v="auto">Auto</button><button data-v="2">2</button><button
+              data-v="4">4</button><button data-v="6">6</button></div>
+        </div>
+        <div class="row">
+          <div><b>Thousands separator</b><small>Show 1,000,000</small></div><label class="sw"><input type="checkbox"
+              id="s-commas" checked><span></span></label>
+        </div>
+        <button class="reset" id="reset">Reset entry and memory</button>
+        <div class="ver">Developed by <a href="https://github.com/thegitguru/" target="_blank" rel="noopener"
+            style="color:var(--fg);font-weight:500">Aryan Verma</a><br><br>Keyboard: digits and operators, Enter to
+          solve, Backspace to delete, Esc to clear.<br>s c t l n r = sin cos tan log ln √, p = π, e = e, shift+P /
+          shift+C = nPr / nCr.</div>
+      </aside>
+    </main>
+    <aside class="hist" id="hist" aria-label="History">
+      <div class="grab"></div>
+      <div class="hh">
+        <h3>History</h3><button class="lnk" id="hclr">Clear history</button>
+      </div>
+      <ol id="hl"></ol>
+    </aside>
+    <div class="bd" id="bd"></div>
+  </div>
+  <script src="script.min.js" class="script"></script>
+</body>
+
+</html>
