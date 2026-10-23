@@ -1,0 +1,6 @@
+{
+  "appId": "com.thegitguru.calcyra",
+  "appName": "Calcyra",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
